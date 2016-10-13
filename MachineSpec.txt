@@ -1,0 +1,71 @@
+processor       : 0
+vendor_id       : GenuineIntel
+cpu family      : 6
+model           : 15
+model name      : Intel(R) Core(TM)2 Duo CPU     T5550  @ 1.83GHz
+stepping        : 13
+cpu MHz         : 1000.000
+cache size      : 2048 KB
+physical id     : 0
+siblings        : 2
+core id         : 0
+cpu cores       : 2
+fpu             : yes
+fpu_exception   : yes
+cpuid level     : 10
+wp              : yes
+flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx lm constant_tsc arch_perfmon pebs bts rep_good pni monitor ds_cpl est tm2 ssse3 cx16 xtpr lahf_lm
+bogomips        : 3661.85
+clflush size    : 64
+cache_alignment : 64
+address sizes   : 36 bits physical, 48 bits virtual
+power management:
+
+processor       : 1
+vendor_id       : GenuineIntel
+cpu family      : 6
+model           : 15
+model name      : Intel(R) Core(TM)2 Duo CPU     T5550  @ 1.83GHz
+stepping        : 13
+cpu MHz         : 1000.000
+cache size      : 2048 KB
+physical id     : 0
+siblings        : 2
+core id         : 1
+cpu cores       : 2
+fpu             : yes
+fpu_exception   : yes
+cpuid level     : 10
+wp              : yes
+flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx lm constant_tsc arch_perfmon pebs bts rep_good pni monitor ds_cpl est tm2 ssse3 cx16 xtpr lahf_lm
+bogomips        : 3657.51
+clflush size    : 64
+cache_alignment : 64
+address sizes   : 36 bits physical, 48 bits virtual
+power management:
+
+
+MemTotal:      2053704 kB
+MemFree:        827284 kB
+Buffers:         64052 kB
+Cached:         568564 kB
+SwapCached:          0 kB
+Active:         575872 kB
+Inactive:       465876 kB
+SwapTotal:     2441840 kB
+SwapFree:      2441840 kB
+Dirty:            5332 kB
+Writeback:           0 kB
+AnonPages:      409080 kB
+Mapped:          62160 kB
+Slab:            79728 kB
+SReclaimable:    61076 kB
+SUnreclaim:      18652 kB
+PageTables:      15760 kB
+NFS_Unstable:        0 kB
+Bounce:              0 kB
+CommitLimit:   3468692 kB
+Committed_AS:   918880 kB
+VmallocTotal: 34359738367 kB
+VmallocUsed:     12656 kB
+VmallocChunk: 34359725051 kB

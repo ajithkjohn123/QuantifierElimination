@@ -1,0 +1,20 @@
+Contents
+------------
+
+This folder contains the implementations of
+Quantifier_Eliminator, Bounded_Model_Checker, 
+and property translator used by Bounded_Model_Checker. 
+
+
+Folder Quantifier_Eliminator/ contains the 
+implementation of Quantifier_Eliminator
+
+Folder Bounded_Model_Checker/ contains the 
+implementation of Bounded_Model_Checker
+
+Folder Property_Translator/ contains the 
+implementation of propTrans
+
+Please see the file HowToInstall.txt inside 
+these folders for installation instructions. 
+

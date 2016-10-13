@@ -1,0 +1,85 @@
+Contents
+------------
+
+This folder contains the lindd benchmarks and vhdl benchmarks 
+used in the experiments.
+
+Folder lindd/ contains the lindd benchmarks.
+
+Folder vhdl/ contains the vhdl benchmarks.
+
+Format of the lindd benchmarks
+-----------------------------------------
+
+These benchmarks are originally taken from the LinDD website 
+http://sourceforge.net/projects/lindd/
+
+Each benchmark is an SMTLIB file in the theory of integers,
+representing a boolean combination of octagonal constraints 
+with a set of variables to be eliminated. Octagonal constraints 
+over integers are constraints of the form a.x + b.y <= k 
+where x, y are integer variables, k is an integer constant, 
+and a, b $\in$ {-1, 1}. 
+
+For example,
+
+(benchmark test
+:extrafuns ((x Int))
+:formula (exists (y Int) (and (<= (+ (* 1 x) (* (~1) y) ) 40 ) (not (<= (+ (* 1 x) (* (~1) y) ) 38) )))
+)
+
+represents \exists y. ( (x-y <= 40) and (x-y > 38) )  
+
+We converted these benchmarks to Boolean combinations of LMCs 
+by assuming the size of integer as 16-bits. 
+
+Format of the vhdl benchmarks
+------------------------------------------
+
+Each benchmark is an SMTLIB file in the theory of bit-vectors,
+representing a boolean combination of LMCs with a set of variables 
+to be eliminated.
+
+These benchmarks were obtained in the following manner. We took a set of 
+word-level VHDL designs. We derived the symbolic transition relations of 
+these VHDL designs. The vhdl benchmarks were obtained by quantifying out 
+all the internal variables (i.e. neither input nor output of the top-level module) 
+from these symbolic transition relations. Effectively this gives abstract 
+transition relations of the designs. 
+
+The set of variables to be eliminated is specified inside a 
+specifier :exists(set of variables to be eliminated)
+
+For example,
+
+(benchmark test
+:extrafuns ((a BitVec[4]))
+:extrafuns ((b BitVec[4]))
+:extrafuns ((c BitVec[4]))
+:extrafuns ((d BitVec[4]))
+:extrafuns ((e BitVec[4]))
+:extrafuns ((f BitVec[4]))
+
+:exists ( a  b )
+
+:formula (if_then_else (= a b) (bvuge c d) (bvult e f))
+)
+
+represents \exists {a, b}. (if_then_else (a = b (mod 16))  (c >= d (mod 16)) (e < f (mod 16)) )  
+
+
+Experimenting with the benchmarks
+-----------------------------------------------
+
+All the experiments reported in the paper on these benchmarks can be performed using the 
+executable ../Executables/Quantifier_Eliminator/Quantifier_Eliminator
+
+Please look at ../Executables/Quantifier_Eliminator/readme.txt to see the details of executing 
+../Executables/Quantifier_Eliminator/Quantifier_Eliminator
+
+
+
+
+
+
+
